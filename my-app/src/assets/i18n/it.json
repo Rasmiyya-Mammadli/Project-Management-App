@@ -1,0 +1,170 @@
+{
+  "HEADER": {
+    "buttons": {
+    "login_button": "Accedi",
+    "logout_button": "Esci",
+    "profile_button": "Profilo",
+    "signup_button": "Registrati"
+    },
+    "new_board_button": "Nuova bacheca"
+  },
+
+  "WELCOME_PAGE": {
+    "title_1": "Project Management App",
+    "title_2": "è progettato per aiutare squadre ad alta performance a raggiungere i loro obiettivi. Con un'interfaccia intuitiva, è facile organizzarsi e iniziare.",
+    "subtitle1": "L'app di PM fornisce un modo visuale per gestire i tuoi progetti, rendendo facile tracciare i progressi,",
+    "subtitle2": " rendendo facile tenere traccia dei progressi e identificare eventuali ostacoli. Con funzionalità come.",
+    "subtitle3": "  Con funzionalità come liste di attività,",
+    "subtitle4": " bacheche Kanban",
+    "subtitle5": "e",
+    "subtitle6": "schede personalizzabili,",
+    "subtitle7": " puoi personalizzare il tuo flusso di lavoro per soddisfare le esigenze del tuo team.",
+    "tools-section": {
+      "list_item1": "LISTE",
+      "list_item2": "BACHECHE",
+      "list_item3": "SCHEDE",
+      "list_description1": "Organizza e assegna compiti. Con le liste, i team vedono immediatamente ciò che devono fare, quali compiti sono prioritari e quando scade il lavoro.",
+      "list_description2": "Facilita al tuo team di concentrarsi sui compiti attualmente in corso. Definisci ogni fase del lavoro per vedere cosa è importante e dove le cose si bloccano.",
+      "list_description3": "Le schede di PMA sono il tuo portale per un lavoro più organizzato, dove ogni singola parte del tuo compito può essere gestita, tracciata e condivisa con i compagni di squadra."
+    },
+    "about-section": {
+      "title": "Su di me",
+      "description": "L'applicazione è stata sviluppata come parte di un corso JS/FE 2022Q3 della Rolling Scopes School.",
+      "person_title": "Rasmiyya Mammadli",
+      "person_description": "Frontend Developer"
+    }
+  },
+  "FOOTER": {
+    "github": "Github",
+    "person": "Rasmiyya"
+  },
+
+  "MAIN_PAGE": {
+    "title": "Tutte le Bacheche",
+    "new_board_button": "Crea Nuova Bacheca",
+    "no_boards": "Non hai ancora nessuna bacheca."
+  },
+
+  "NOT_FOUND": {
+    "404_page": "404 Spiacente, la pagina non è stata trovata."
+  },
+
+  "FORM": {
+    "labelName": "Nome",
+    "labelLogin": "Login",
+    "labelPass": "Password",
+    "nameFormErrorReq": "Inserisci il tuo nome",
+    "nameFormErrorMinL": "Il nome è troppo corto",
+    "nameFormErrorMaxL": "Il nome è troppo lungo",
+    "nameFormErrorRegx": "Solo lettere latine, ad esempio: Luna Mammadli",
+    "loginFormErrorReq": "Inserisci il tuo login",
+    "loginFormErrorMinL": "Il login è troppo corto",
+    "loginFormErrorMaxL": "Il login è troppo lungo",
+    "loginFormErrorRegx": "Il login può contenere solo lettere latine e numeri",
+    "passwordErrorRequest": "Inserisci la tua password",
+    "passFormErrorRegx": "Almeno 8 caratteri con numeri, lettere maiuscole e il simbolo speciale !@#?].",
+    "passMinL": "La password deve avere almeno 8 caratteri",
+    "passHasUpperCase": "La password deve contenere lettere maiuscole",
+    "passHasNumeric": "La password deve contenere numeri",
+    "passHasSymbol": "La password deve contenere i seguenti simboli speciali: ! @ # ? ]"
+  },
+  "LOGIN_PAGE": {
+    "title": "Ciao",
+    "subtitle": "Benvenuto/a al tuo account",
+    "button": "Accedi",
+    "no-account": "Non hai un account?",
+    "link": "Registrati"
+  },
+  "SIGNUP_PAGE": {
+    "title": "Registrazione",
+    "subtitle": "Uno strumento unificato di gestione dei progetti per l'intera azienda, dal marketing allo sviluppo ingegneristico e molto altro ancora.",
+    "button": "Registrati",
+    "haveAccount": "Hai già un account?",
+    "link": "Accedi"
+  },
+  "USER_PAGE": {
+    "title": "Profilo",
+    "save": "Salva",
+    "successSaved": "Salvato!",
+    "delete": "Elimina account"
+  },
+  "BOARD_PAGE": {
+    "title": "Bacheca",
+    "create-column": "Crea una Colonna",
+    "user-info": "Informazioni Utente Assegnato",
+    "user-name": "Nome",
+    "user-login": "Accesso",
+    "delete-button": "Rimuovi Utente dalla Bacheca"
+},
+  "CREATE_BOARD": {
+    "title": "Crea una Scheda",
+    "label": "Titolo della Scheda",
+    "formError": "Per favore, inserisci un titolo per la scheda",
+    "button": "Crea Scheda",
+    "add-users": "Aggiungi Utenti"
+},
+"CREATE_COLUMN": {
+  "title": "Crea una Colonna",
+  "label": "Titolo della Colonna",
+  "formError": "Per favore, inserisci un titolo per la colonna",
+  "button": "Crea Colonna"
+},
+"CREATE_TASK_MODAL": {
+  "title": "Crea un Compito",
+  "labelTitle": "Titolo del Compito",
+  "labelDescription": "Descrizione del Compito",
+  "formTitleError": "Per favore, inserisci un titolo per il compito",
+  "formDescriptionError": "Per favore, inserisci una descrizione per il compito",
+  "button": "Crea Compito"
+},
+
+  "ASSIGN_USERS": {
+    "title": "Assegna utenti alla scheda",
+    "users": "Tutti gli utenti",
+    "no-users": "Non ci sono altri utenti registrati in questa app",
+    "assign-button": "Assegna utenti selezionati"
+},
+  "CONFIRM_MODAL": {
+    "title": "Elimina",
+    "targetAccount": "account",
+    "targetBoard": "bacheca",
+    "targetCol": "colonna",
+    "targetTask": "attività",
+    "question": "Sei sicuro?",
+    "cancel": "Annulla"
+  },
+  "COLUMN": {
+    "titleError": "Inserisci un titolo per la colonna",
+    "add-task": "Aggiungi attività",
+    "delete-button": "Elimina colonna"
+  },
+  "TASK": {
+    "title": "Modifica attività",
+    "label-title": "Titolo",
+    "formTitleError": "Inserisci un titolo per l'attività",
+    "labelDescription": "Descrizione",
+    "formDescriptionError": "Inserisci una descrizione per l'attività",
+    "save-button":  "Salva",
+    "assign-users": "Assegna utenti",
+    "assignedUsers": "Utenti assegnati"
+  },
+  "API_ERRORS": {
+    "loginExist": "Il login esiste già",
+    "authError": "Nome utente o password non validi",
+    "invalidToken": "Token non valido",
+    "badRequest": "Errore del server, riprova",
+    "unknowError": "Errore sconosciuto... Aggiorna la pagina",
+    "notFounded": "Non trovato"
+  },
+  "SEARCH-RESULTS": {
+    "error": "Per favore inserisci del testo.",
+    "start-your-search": "Per favore inizia la tua ricerca.",
+    "not-found": "Nessun risultato trovato.",
+    "search-results": "Risultati della ricerca per:",
+    "taskLabel": "Task",
+    "descLabel": "Descrizione",
+    "openBoard": "Apri bacheca attività",
+    "users": "Utenti"
+  }
+
+}

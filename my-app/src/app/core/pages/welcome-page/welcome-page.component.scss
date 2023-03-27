@@ -1,0 +1,19 @@
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    line-height: 3rem;
+
+  }
+}
+.mat-divider {
+  max-width: 700px;
+  margin: 0 auto;
+}
+

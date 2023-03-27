@@ -1,0 +1,84 @@
+<div class="board_header bg-rose-100">
+  <div class="board_title">
+    <button (click)="onNavigateToMain()" mat-icon-button aria-label="Back">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h1 *ngIf="board" [title]="board.title">
+      {{ 'BOARD_PAGE.title' | translate }}: <b>{{ board.title }}</b>
+    </h1>
+  </div>
+  <div class="board_controls">
+    <button
+      class="add-col"
+      mat-raised-button
+      color="warn"
+      type="button"
+      (click)="onCreateColumn()">
+      {{ 'BOARD_PAGE.create-column' | translate }}
+    </button>
+    <button
+      class="add-col-mob"
+      mat-mini-fab
+      color="warn"
+      aria-label="add column"
+      (click)="onCreateColumn()">
+      <mat-icon>add</mat-icon>
+    </button>
+    <div class="board_header_users">
+      <div class="assign-user">
+        <button
+          mat-icon-button
+          color="warn"
+          class="assign-user_btn"
+          (click)="onOpenUserDialog()">
+          <mat-icon class="assign-user__icon">person_add_alt</mat-icon>
+        </button>
+      </div>
+      <div class="board_users" *ngIf="boardUsers.length !== 0">
+        <div *ngFor="let user of boardUsers">
+          <button mat-icon-button [matMenuTriggerFor]="menu" class="user_btn" color="warn">
+            {{ user.name!.slice(0, 1) | uppercase }}
+          </button>
+          <mat-menu #menu="matMenu">
+            <div class="w-52 mt-[-8px] flex flex-col items-stretch">
+              <p class="p-4 bg-blue-500 text-white text-center">
+                {{ 'BOARD_PAGE.user-info' | translate }}
+              </p>
+              <div class="flex flex-wrap px-2">
+                <p class="text-xs text-gray-500 mr-2">
+                  {{ 'BOARD_PAGE.user-name' | translate }}:
+                </p>
+                <p class="user_info__title-data">{{ user.name }}</p>
+              </div>
+              <div class="flex flex-wrap px-2">
+                <p class="text-xs text-gray-500 mr-2">
+                  {{ 'BOARD_PAGE.user-login' | translate }}:
+                </p>
+                <p class="user_info__title-data">{{ user.login }}</p>
+              </div>
+              <button mat-stroked-button (click)="onDeleteUser(user._id)" color="warn">
+                {{ 'BOARD_PAGE.delete-button' | translate }}
+              </button>
+            </div>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="columnDragList"
+  class="min-w-full min-h-screen-34 flex flex-wrap gap-5 overflow-x-auto overflow-y-hidden"
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  [cdkDropListData]="columns"
+  (cdkDropListDropped)="dropColumns($event)">
+  <app-column-component
+    *ngFor="let column of columns"
+    [column]="column"
+    [columns]="columns"
+    [cdkDragData]="column"
+    cdkDropListGroup
+    cdkDrag>
+  </app-column-component>
+</div>

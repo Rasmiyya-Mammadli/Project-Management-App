@@ -1,0 +1,47 @@
+<mat-list-item class="result border-b-2 border-gray-200 py-3">
+  <div class="result_item flex items-start">
+    <div class="result_item__data flex-grow">
+      <div>
+        <p mat-card-subtitle class="result_item__task-sub text-gray-500">
+          {{ 'SEARCH-RESULTS.taskLabel' | translate }}:
+        </p>
+        <p class="result_item__task text-lg font-medium">{{ task.title }}</p>
+      </div>
+      <div>
+        <p mat-card-subtitle class="result_item__task-sub text-gray-500">
+          {{ 'SEARCH-RESULTS.descLabel' | translate }}:
+        </p>
+        <p class="result_item__description mt-2 text-gray-600">
+          {{ task.description }}
+        </p>
+      </div>
+    </div>
+    <div class="result_item_btns flex items-center">
+      <button
+        mat-stroked-button
+        (click)="navigateToBoard()"
+        class="result_item_remove-btn text-gray-600 hover:text-gray-800">
+        <mat-icon
+          mat-icon-no-color
+          color="accent"
+          class="result_item_remove-btn__icon mr-1"
+          >developer_board</mat-icon
+        >{{ 'SEARCH-RESULTS.openBoard' | translate }}
+      </button>
+    </div>
+  </div>
+  <div *ngIf="task.users.length !== 0" class="result_users mt-3">
+    <p mat-card-subtitle class="result_item__task-sub text-gray-500">
+      {{ 'SEARCH-RESULTS.users' | translate }}:
+    </p>
+    <div class="result_users_list flex flex-wrap">
+      <p
+        mat-card-content
+        *ngFor="let user of filteredUsers; index as i"
+        class="text-gray-600 mr-2 mb-2">
+        {{ filteredUsers[i].name }} |
+      </p>
+    </div>
+  </div>
+  <mat-divider class="mt-3"></mat-divider>
+</mat-list-item>

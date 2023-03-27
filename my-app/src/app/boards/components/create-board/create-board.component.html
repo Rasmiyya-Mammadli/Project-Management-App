@@ -1,0 +1,41 @@
+<form
+  [formGroup]="createBoardForm"
+  (ngSubmit)="onSubmit(formDirective)"
+  #formDirective="ngForm"
+  class="create-board bg-white rounded-lg shadow-lg p-6">
+  <div class="create-board_container">
+    <h2 class="text-2xl font-bold mb-6">
+      {{ 'CREATE_BOARD.title' | translate }}
+    </h2>
+    <div class="create-board_inputs-container">
+      <mat-form-field appearance="fill" class="w-full mb-4">
+        <mat-label>{{ 'CREATE_BOARD.label' | translate }}</mat-label>
+        <input matInput formControlName="title" required class="w-full" />
+        <mat-error *ngIf="title!.invalid">
+          {{ 'CREATE_BOARD.formError' | translate }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="w-full mb-4">
+        <mat-label>{{ 'CREATE_BOARD.add-users' | translate }}</mat-label>
+        <mat-select formControlName="usersSelect" multiple class="w-full">
+          <mat-option *ngFor="let user of users$ | async" [value]="user._id">{{
+            user.name
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button
+      mat-raised-button
+      color="warn"
+      type="submit"
+      class="w-full hover:bg-rose-700 text-white font-bold py-2 px-4 rounded mt-4">
+      {{ 'CREATE_BOARD.button' | translate }}
+    </button>
+    <button
+      mat-icon-button
+      (click)="onClose()"
+      class="close-modal-button absolute top-0 right-0 mt-3 mr-3 bg-rose-300">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</form>
